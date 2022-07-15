@@ -38,8 +38,8 @@ class _ListCategoriesState extends State<ListCategories> {
 
     var response = await http.get(Uri.parse(url));
 
-    fileListImage.writeAsString('${appDocDir!.path}/images${random}.jpeg\n', mode: FileMode.writeOnlyAppend);
-    image = File('${appDocDir!.path}/images${random}.jpeg');
+    fileListImage.writeAsString('${appDocDir!.path}/images$random.jpeg\n', mode: FileMode.writeOnlyAppend);
+    image = File('${appDocDir!.path}/images$random.jpeg');
 
     image.writeAsBytesSync(response.bodyBytes);
     _initialize();
